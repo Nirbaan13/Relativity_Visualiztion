@@ -1,5 +1,33 @@
 <!DOCTYPE html>
 <html lang="en-US">
+<!-- START NIRVAN'S CUSTOM SCIENCE PROJECT MOD -->
+<title>Nirbaan's Science Project</title>
+<style>
+    /* 1. Permanently hide the About button, ChanRT branding, and GitHub links */
+    nav ul li a[href*="index"], 
+    nav ul li a[href*="about"],
+    .footer-copyright, 
+    footer,
+    a[href*="github.com"] { 
+        display: none !important; 
+    }
+    
+    /* 2. Style an elegant custom header bar at the top of the screen */
+    .brand-logo, title, h4, h2 {
+        font-family: 'Arial', sans-serif !important;
+    }
+</style>
+<script>
+    // 3. Dynamically rewrite any text on the screen to show your name once loaded
+    window.addEventListener('DOMContentLoaded', () => {
+        const logo = document.querySelector('.brand-logo');
+        if (logo) logo.innerHTML = "Nirbaan's Science Project";
+        
+        const mainHeading = document.querySelector('h2, h4');
+        if (mainHeading) mainHeading.innerHTML = "Nirbaan's Science Project: Special Relativity";
+    });
+</script>
+<!-- END NIRVAN'S CUSTOM SCIENCE PROJECT MOD -->
 
 <head>
   <title>Special Relativity | Visualize It</title>
